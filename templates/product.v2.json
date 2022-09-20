@@ -1,0 +1,78 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-test-product",
+      "blocks": {
+        "b1a980d8-4946-4c68-8352-acd08f4fa3c6": {
+          "type": "tax_notice_block",
+          "settings": {
+            "tax_notice_text": "note something"
+          }
+        },
+        "87f0c6d5-c755-4fa7-8c6c-a3ecbc42e1fc": {
+          "type": "shipping_notice_block",
+          "settings": {
+            "shipping_notice_text": "make sense"
+          }
+        }
+      },
+      "block_order": [
+        "b1a980d8-4946-4c68-8352-acd08f4fa3c6",
+        "87f0c6d5-c755-4fa7-8c6c-a3ecbc42e1fc"
+      ],
+      "settings": {}
+    },
+    "testimonial-slide": {
+      "type": "testimonial-slider",
+      "blocks": {
+        "8766658-456378": {
+          "type": "testimonial-block",
+          "settings": {
+            "customer_comment": "This product is great!",
+            "customer_name": "Aaron Jack"
+          }
+        },
+        "b86e6248-3c65-4c07-a787-0999a41a7d9a": {
+          "type": "testimonial-block",
+          "settings": {
+            "customer_comment": "2nd",
+            "customer_name": "John Doe"
+          }
+        },
+        "85d86da4-d116-46fb-b44a-9549c25a3255": {
+          "type": "testimonial-block",
+          "settings": {
+            "customer_comment": "3rd",
+            "customer_name": "Nicola Jason"
+          }
+        },
+        "e8b740c5-f7e0-4419-977f-1a62e3cb70c7": {
+          "type": "testimonial-block",
+          "settings": {
+            "customer_comment": "4th",
+            "customer_name": "Sunny Lee"
+          }
+        },
+        "5af41d17-fa55-4725-af79-9d4f7a33644f": {
+          "type": "testimonial-block",
+          "settings": {
+            "customer_comment": "5th",
+            "customer_name": "Robert Kim"
+          }
+        }
+      },
+      "block_order": [
+        "8766658-456378",
+        "b86e6248-3c65-4c07-a787-0999a41a7d9a",
+        "85d86da4-d116-46fb-b44a-9549c25a3255",
+        "e8b740c5-f7e0-4419-977f-1a62e3cb70c7",
+        "5af41d17-fa55-4725-af79-9d4f7a33644f"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "testimonial-slide"
+  ]
+}

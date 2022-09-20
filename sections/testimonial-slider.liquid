@@ -1,0 +1,59 @@
+<div class="slick-slider responsive">
+    {% for block in section.blocks %}
+    {% case block.type %}
+    {% when "testimonial-block" %}
+        <div class="testimonial-block">
+            <img src="https://pic.onlinewebfonts.com/svg/img_532719.png" class="quote-img">
+            <p class="customer-comment">{{ block.settings.customer_comment}}</p>
+            <img src="{{ block.settings.image | img_url: "300x" }}" class="profile-img">
+            <h4 class="profile-name">{{ block.settings.customer_name }}</h4>
+        </div>	
+    {% endcase %}
+    {% endfor %}
+</div>
+
+
+{% schema %}
+{
+    "name":"testimonial-slide",
+    "settings":[
+    ],
+    "blocks":[
+        {
+            "type":"testimonial-block",
+            "name":"Testimonial Block",
+            "limit":10,
+            "settings":[
+                {
+                    "id":"customer_comment",
+                    "label":"Customer Comment",
+                    "type":"text"
+                },
+                {
+                    "id":"customer_name",
+                    "label":"Customer Name",
+                    "type":"text"
+                },
+                {
+                    "id":"image",
+                    "label":"Image",
+                    "type":"image_picker"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+          "name": "Testimonial Slider",
+          "blocks": [
+            {
+              "type": "testimonial-block"
+            },
+            {
+              "type": "testimonial-block"
+            }
+          ]
+        }
+      ]
+}
+{% endschema %}

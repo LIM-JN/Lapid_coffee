@@ -1,0 +1,49 @@
+<h4>hello from the section</h4>
+
+<h2>{{product.title}}</h2>
+
+<img src="{{product.featured_image | img_url: "300x" }}"/>
+
+
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when "tax_notice_block" %}
+            <h4>{{block.settings.tax_notice_text}}</h4>
+        {% when "shipping_notice_block" %}
+            <h4>{{block.settings.shipping_notice_text}}</h4>
+    {% endcase %}
+{% endfor %}
+
+{% schema %}
+{
+    "name":"product-name-content",
+    "settings":[
+    ],
+    "blocks":[
+        {
+            "type":"tax_notice_block",
+            "name":"Tax Notice",
+            "limit":1,
+            "settings":[
+                {
+                    "id":"tax_notice_text",
+                    "label":"tax notice",
+                    "type":"text"
+                }               
+            ]
+        },
+        {
+            "type":"shipping_notice_block",
+            "name":"Shipping Notice",
+            "limit":1,
+            "settings":[
+                {
+                    "id":"shipping_notice_text",
+                    "label":"shipping notice",
+                    "type":"text"
+                }               
+            ]
+        }
+    ]
+}
+{% endschema %}
