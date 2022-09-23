@@ -2981,3 +2981,26 @@ font-weight: bold;
   color:#121212;
   font-size:1.2em
 }
+.metafield-th, .metafield-td {
+  width:155px;
+  height:45px;
+  margin:0;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align:center;
+}
+.metafield-table {
+  border-spacing:1px;
+  background-color:#999;
+  margin:1px;
+}
+.metafield-td svg {
+  width:24px;
+  height:24px;
+}
+#acidity {
+  padding:5px;
+}
+#strength {
+  padding:5px;
+}

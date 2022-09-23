@@ -357,6 +357,58 @@
               {%- endif -%}
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
+
+            {%- when 'detail_info'-%}
+              <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                <details id="Details-{{ block.id }}-{{ section.id }}">
+                  <summary>
+                    <div class="summary__title">
+                      {% render 'icon-accordion' icon:'leaf'%}
+                      <h2 class="h4 accordion__title">
+                        Coffee Info
+                      </h2>
+                    </div>
+                    {% render 'icon-caret' %}
+                  </summary>
+                  <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                    <table class="metafield-table">
+                      <tr>
+                          <th class="metafield-th">Taste</th><td class="metafield-td">{{ block.settings.taste}}</td>
+                      </tr>
+                      <tr>
+                          <th class="metafield-th">Strength</th>
+                          <td class="metafield-td" id="strength">
+                            {% for i in (1..5) %}
+                              {% if product.metafields.custom.strength.value >= i %}
+                              {% render 'icon-coffee-bean-filled' %}
+                              {% else %}
+                              {% render 'icon-coffee-bean-empty'%}
+                              {% endif %}
+                            {% endfor %}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="metafield-th">Acidity</th>
+                          <td class="metafield-td" id="acidity">
+                            {% for i in (1..5) %}
+                              {% if product.metafields.custom.acidity.value >= i %}
+                              {% render 'icon-coffee-bean-filled' %}
+                              {% else %}
+                              {% render 'icon-coffee-bean-empty'%}
+                              {% endif %}
+                            {% endfor %}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="metafield-th">Type</th><td class="metafield-td">{{ block.settings.type}}</td>
+                      </tr>
+                      <tr>
+                          <th class="metafield-th">Origin</th><td class="metafield-td">{{ block.settings.origin}}</td>
+                      </tr>
+                    </table>
+                  </div>
+                </details>
+              </div>
             {%- when 'collapsible_tab' -%}
               <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                 <details id="Details-{{ block.id }}-{{ section.id }}">
@@ -1288,6 +1340,37 @@
           "id": "custom_liquid",
           "label": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.label",
           "info": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.info"
+        }
+      ]
+    },
+    {
+      "type": "detail_info",
+      "name": "Detail Info",
+      "settings": [
+        {
+          "type":"text",
+          "id":"taste",
+          "label":"Taste"
+        },
+        {
+          "type":"text",
+          "id":"strangth",
+          "label":"Strangth"
+        },
+        {
+          "type":"text",
+          "id":"acidity",
+          "label":"Acidity"
+        },
+        {
+          "type":"text",
+          "id":"type",
+          "label":"Type"
+        },
+        {
+          "type":"text",
+          "id":"origin",
+          "label":"Origin"
         }
       ]
     },
