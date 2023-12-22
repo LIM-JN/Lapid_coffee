@@ -66,6 +66,11 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "d2439bdf-d992-4a3e-8c72-af29703254f2": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -78,7 +83,8 @@
         "description",
         "collapsible-row-1",
         "0ecd451b-d1bc-4236-8e70-a781ca0fc2c7",
-        "share"
+        "share",
+        "d2439bdf-d992-4a3e-8c72-af29703254f2"
       ],
       "settings": {
         "enable_sticky_info": true,
